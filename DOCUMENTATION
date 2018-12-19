@@ -1,0 +1,61 @@
+EPICTURE 2018
+
+EPICTURE project is an application who's connected to your imgur account.
+The application contains 4 pages.
+
+MainScreen :
+  render :
+    -Default view is a welcome sign until connexion with imgur account is made.
+    -Latest Hot post
+  functions :
+    -searchPost()
+    Go fetch the lastest hot post from the imgur api.
+    -Posts()
+    Draw posts
+    -_storeData(key, token)
+    get the data from the connexion api and store it
+    -_retrieveData(key)
+    check the value received
+    -navigate(url)
+    parse the data from the api auth
+
+ProfilScreen :
+    render :
+      -Draw your own posts
+      -Draw your favorites
+    functions :
+      -componentWillMount()
+      -_retrieveData(key)
+      check the value received
+      -Posts()
+      Draw posts
+      -FirstRoute()/SecondRoute()
+      Etablish a route with the api sent
+      -_renderTabBar()
+      Draw a bar for chosing either the favorite or own-posts display.
+
+SearchScreen :
+  render :
+    -Draw posts with the seeking tag.
+    -Can be order under different filter
+  functions :
+    -Posts()
+    Draw posts
+    -_retrieveData(key)
+    check the value received
+    -searchPost()
+    Go fetch the lastest post with the tag from the imgur api.
+
+UploadScreen :
+  render :
+    -Let you choose image from gallery and title to upload as a post
+  functions :
+    -_retrieveData(key)
+    check the value received
+    -componentDidMount()
+    asking permissions to user
+    -getPic()
+    Taking picture from the phone
+    -uploadPic()
+    uploading the post
+  
